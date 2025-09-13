@@ -3,14 +3,12 @@ name: Issue作成者への自動アサイン
 on:
   issues:
     types: [opened]
-
-permissions:
-  issues: write
-
 jobs:
-  assign:
+  auto-assign-author:
+    # バージョン自動更新の際は除外
+    if: ${{ ! contains(fromJson('["renovate[bot]", "dependabot[bot]"]'), github.actor) }}
+    permissions:
+      issues: write
     runs-on: ubuntu-latest
     steps:
-      - uses: peter-evans/assign-issue@v2
-        with:
-          assignees: ${{ github.actor }}
+      - uses: technote-space/assign-author@v1
