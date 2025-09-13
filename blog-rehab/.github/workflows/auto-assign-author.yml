@@ -1,0 +1,16 @@
+name: Issue作成者への自動アサイン
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: peter-evans/assign-issue@v2
+        with:
+          assignees: ${{ github.actor }}

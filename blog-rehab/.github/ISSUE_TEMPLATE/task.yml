@@ -1,0 +1,23 @@
+name: Task
+description: 作業用のシンプルなIssueテンプレート
+title: "[Task] "
+labels: ["task"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: このIssueでやる目的を一文で書いてください
+      placeholder: 例) Vueを導入し、最小限の動作確認をする
+    validations:
+      required: true
+
+  - type: textarea
+    id: todo
+    attributes:
+      label: やること
+      description: 実施項目を箇条書きしてください
+      placeholder: |
+        - vite.config.jsでvue()プラグインを使用
+        - resources/js/app.jsにcreateAppを書いて #app にマウント
+        - resources/views/layouts/app.blade.php に <div id="app"></div> を置いて導入確認
