@@ -1,6 +1,5 @@
 name: Task
 description: 作業用のシンプルなIssueテンプレート
-title: "[Task] "
 labels: ["task"]
 body:
   - type: textarea
