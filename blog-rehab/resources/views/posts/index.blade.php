@@ -2,6 +2,7 @@
 
 @section('content')
     <h2>投稿一覧</h2>
+    <span id="vue-badge-anchor"></span>
 
     <table border="1" cellpadding="8" cellspacing="0">
         <thead>

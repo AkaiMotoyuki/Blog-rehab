@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        @vite(['resources/js/app.js'])
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <title>blog rehab</title>
     </head>
